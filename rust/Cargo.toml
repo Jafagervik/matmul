@@ -26,6 +26,11 @@ name= "mm8"
 path = "benches/x86/avx/i32/mm8.rs"
 harness = false
 
+[[bench]]
+name= "mm16"
+path = "benches/x86/avx/i32/mm16.rs"
+harness = false
+
 
 [[bench]]
 name= "f32mm4"
