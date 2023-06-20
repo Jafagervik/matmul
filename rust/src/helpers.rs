@@ -24,9 +24,9 @@ pub fn matmul_timer<T, const M: usize, const P: usize, const N: usize>(
 }
 
 pub fn randomize_range<T: MatrixType, const M: usize, const N: usize>(
-    mat: &mut [i32; M * N],
-    start: i32,
-    stop: i32,
+    mat: &mut [T; M * N],
+    start: T,
+    stop: T,
 ) where
     [T; M * N]:,
 {
@@ -50,7 +50,7 @@ where
 }
 
 pub fn print_matrix<T: MatrixType, const M: usize, const N: usize>(
-    mat: &[i32; M * N],
+    mat: &[T; M * N],
     decimals: usize,
 ) where
     [T; M * N]:,
@@ -67,8 +67,8 @@ pub fn print_matrix<T: MatrixType, const M: usize, const N: usize>(
 pub fn transpose<T: MatrixType, const M: usize, const N: usize>(matrix: &[T; M * N]) -> [T; N * M]
 where
     T: MatrixType,
-    [i32; M * N]:,
-    [i32; N * M]:,
+    [T; M * N]:,
+    [T; N * M]:,
 {
     let mut data: [T; N * M] = [T::zero(); N * M];
 

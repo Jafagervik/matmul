@@ -87,7 +87,7 @@ pub unsafe fn mm_8<const M: usize, const P: usize, const N: usize>(
 
             // Now store these value into an array and sum it up
             let result: [D; N] = mem::transmute(c_load);
-            c[i * N + j] = result.into_par_iter().sum();
+            c[i * N + j] = result.iter().sum();
         }
     }
 }

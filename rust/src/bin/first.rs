@@ -1,36 +1,29 @@
 use std::time::Instant;
 
-use rust::matmul::x86::avx::i32;
+use rust::matmul::x86::avx::f32;
 use rust::{helpers::*, unopt};
 
-type D = i32;
-const N: usize = 8;
+type D = f32;
+const N: usize = 4;
 const M: usize = 8;
 const K: usize = 8;
 
 fn main() {
-    let mut a = [0i32; N * N];
-    let mut b = [0i32; N * N];
+    let mut a = [0f32; N * N];
+    let mut b = [0f32; N * N];
 
-    randomize_range::<D, N, N>(&mut a, 1, 2);
-    randomize_range::<D, N, N>(&mut b, 1, 2);
+    randomize_range::<D, N, N>(&mut a, 1.0, 2.0);
+    randomize_range::<D, N, N>(&mut b, 1.0, 2.0);
 
     let b_transposed = transpose::<D, N, N>(&b);
 
-    let mut c = [0; N * N];
+    let mut c = [0.0; N * N];
 
     let start = Instant::now();
 
-    match N {
-        4 => unsafe {
-            i32::mm_4::<N, N, N>(&mut c, &a, &b_transposed);
-        },
-
-        8 => unsafe {
-            i32::mm_8::<N, N, N>(&mut c, &a, &b_transposed);
-        },
-        _ => unreachable!(),
-    }
+    unsafe {
+        f32::mm_4::<N, N, N>(&mut c, &a, &b_transposed);
+    };
 
     let elapsed = start.elapsed();
 
@@ -41,7 +34,7 @@ fn main() {
     println!("Optimal: {:.1}", elapsed.as_nanos());
     println!();
 
-    let mut c_unopt = [0; N * N];
+    let mut c_unopt = [0f32; N * N];
 
     let start = Instant::now();
     unopt::naive_tranpose::<D, N, N, N>(&mut c_unopt, &a, &b);
