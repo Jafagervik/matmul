@@ -81,15 +81,24 @@ where
     data
 }
 
-pub fn check<T: MatrixType, const M: usize, const N: usize>(
-    lhs: &[T; M * N],
-    rhs: &[T; M * N],
-) -> bool {
-    let eps: T = T::one();
+pub fn check_f32<const M: usize, const N: usize>(lhs: &[f32; M * N], rhs: &[f32; M * N]) -> bool {
+    let eps: f32 = 1e-5;
 
     for i in 0..M {
         for j in 0..N {
-            if (lhs[i * N + j] != rhs[i * N + j]) {
+            if (lhs[i * N + j] - rhs[i * N + j]).abs() >= eps {
+                return false;
+            }
+        }
+    }
+
+    true
+}
+
+pub fn check_i32<const M: usize, const N: usize>(lhs: &[i32; M * N], rhs: &[i32; M * N]) -> bool {
+    for i in 0..M {
+        for j in 0..N {
+            if lhs[i * N + j] != rhs[i * N + j] {
                 return false;
             }
         }

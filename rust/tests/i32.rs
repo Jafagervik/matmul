@@ -24,7 +24,7 @@ fn squared_4() {
 
     unopt::naive_tranpose::<D, N, N, N>(&mut c_unopt, &a, &b);
 
-    assert_eq!(check::<D, N, N>(&c, &c_unopt), true);
+    assert_eq!(check_i32::<N, N>(&c, &c_unopt), true);
 }
 
 #[test]
@@ -38,7 +38,7 @@ fn squared_8() {
 
     let b_transposed = transpose::<D, N, N>(&b);
 
-    let mut c = [0; N * N];
+    let mut c = [0i32; N * N];
 
     unsafe {
         i32::mm_8::<N, N, N>(&mut c, &a, &b_transposed);
@@ -47,5 +47,5 @@ fn squared_8() {
 
     unopt::naive_tranpose::<D, N, N, N>(&mut c_unopt, &a, &b);
 
-    assert_eq!(check::<D, N, N>(&c, &c_unopt), true);
+    assert_eq!(check_i32::<N, N>(&c, &c_unopt), true);
 }

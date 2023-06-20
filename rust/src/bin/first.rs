@@ -44,5 +44,5 @@ fn main() {
     print_matrix::<D, N, N>(&c_unopt, 2);
     println!("Naive: {:.1}", elapsed.as_nanos());
 
-    assert_eq!(check::<D, N, N>(&c, &c_unopt), true);
+    assert_eq!(check_f32::<N, N>(&c, &c_unopt), true);
 }
