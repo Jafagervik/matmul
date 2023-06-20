@@ -1,0 +1,12 @@
+/home/jaf/p/matmul/rust/target/release/deps/rand_core-af34af8c5bb2ca67.rmeta: /home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/lib.rs /home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/block.rs /home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/error.rs /home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/impls.rs /home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/le.rs /home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/os.rs
+
+/home/jaf/p/matmul/rust/target/release/deps/librand_core-af34af8c5bb2ca67.rlib: /home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/lib.rs /home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/block.rs /home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/error.rs /home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/impls.rs /home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/le.rs /home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/os.rs
+
+/home/jaf/p/matmul/rust/target/release/deps/rand_core-af34af8c5bb2ca67.d: /home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/lib.rs /home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/block.rs /home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/error.rs /home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/impls.rs /home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/le.rs /home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/os.rs
+
+/home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/lib.rs:
+/home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/block.rs:
+/home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/error.rs:
+/home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/impls.rs:
+/home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/le.rs:
+/home/jaf/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rand_core-0.6.4/src/os.rs:

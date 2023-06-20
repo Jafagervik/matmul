@@ -1,0 +1,27 @@
+[package]
+name = "rust"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+criterion = "0.5.1"
+num-traits = "0.2.15"
+rand = "0.8.5"
+rayon = "1.7.0"
+
+[profile.release]
+opt-level = 3
+
+[[bench]]
+name= "mm4"
+path = "benches/x86/avx/i32/mm4.rs"
+harness = false
+
+
+
+[[bench]]
+name= "mm8"
+path = "benches/x86/avx/i32/mm8.rs"
+harness = false
